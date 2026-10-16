@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -32,6 +32,7 @@
   "image": "https://rietmannamerica.com/assets/img/muehle.jpg",
   "description": "Premezclas profesionales para panadería y pastelería: proteicas, bajas en carbohidratos, sin gluten y orgánicas, con la calidad alemana de Theodor Rietmann GmbH.",
   "email": "info@rietmannamerica.com",
+  "telephone": "+13053431787",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "3745 NE 171 Street, Apt 77",
@@ -575,8 +576,7 @@ body.catalog-lock{overflow:hidden;}
       <a href="#novedades" data-i18n="topbar_actualidad">Actualidad</a>
     </div>
     <div class="topbar-links">
-      <a href="https://api.whatsapp.com/send?phone=+34641054544&text=Hola">WhatsApp · +34 641 05 45 44</a>
-      <a href="tel:+34931592650">931 592 650</a>
+      <a href="tel:+13053431787">+1 (305) 343-1787</a>
     </div>
   </div>
 </div>
@@ -1180,7 +1180,6 @@ body.catalog-lock{overflow:hidden;}
       <h2 data-i18n="cta_h2">¿Preparamos tu próximo pedido?</h2>
       <p data-i18n="cta_desc">Pide fichas técnicas, condiciones de suministro o una muestra de obrador. Te contestamos en menos de 48 horas laborables.</p>
       <a href="mailto:info@rietmannamerica.com" class="btn btn-dark" data-i18n="btn_presupuesto">Solicitar presupuesto</a>
-      <a href="https://api.whatsapp.com/send?phone=+34641054544&text=Hola" class="btn-outline" data-i18n="cta_whatsapp">Escribir por WhatsApp</a>
     </div>
   </section>
 
@@ -1198,13 +1197,13 @@ body.catalog-lock{overflow:hidden;}
           3745 NE 171 Street, Apt 77<br>
           North Miami Beach, FL 33160<br>
           United States<br>
+          <a href="tel:+13053431787">+1 (305) 343-1787</a><br>
           <a href="mailto:info@rietmannamerica.com">info@rietmannamerica.com</a>
         </p>
         <div class="footer-social">
           <a href="https://facebook.com/profile.php?id=100083321601979" aria-label="Facebook">f</a>
           <a href="https://www.instagram.com/rietmanniberica/" aria-label="Instagram">◎</a>
           <a href="https://www.linkedin.com/company/74626547" aria-label="LinkedIn">in</a>
-          <a href="https://api.whatsapp.com/send?phone=+34641054544" aria-label="WhatsApp">✆</a>
         </div>
         <div class="footer-certs">
           <img src="assets/img/cert-ecocert.png" alt="Certificación Ecocert">
@@ -1256,7 +1255,7 @@ body.catalog-lock{overflow:hidden;}
       var saved = localStorage.getItem('rietmann_lang');
       if (saved && I18N[saved]) return saved;
     } catch(e){}
-    return 'es';
+    return 'en';
   }
   function setLang(l){
     try { localStorage.setItem('rietmann_lang', l); } catch(e){}
@@ -1454,7 +1453,7 @@ body.catalog-lock{overflow:hidden;}
   }
   dlBtn.addEventListener('click', async function(){
     if (dlBusy) return;
-    var lang = state.lang || 'es';
+    var lang = state.lang || 'en';
     dlBusy = true; dlBtn.disabled = true; setDlLabel(window.t('catalog_dl_prep'));
     try {
       var head = await fetch(pdfFileFor(lang), { method: 'HEAD' }).catch(function(){ return null; });
